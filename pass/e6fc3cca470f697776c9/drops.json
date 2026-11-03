@@ -150,7 +150,7 @@
   "qa": {
     "note": "Questions any time: reply to your Stripe receipt email with an interview question and we answer in writing by email. No live calls."
   },
-  "portal_url": "",
+  "portal_url": "https://billing.stripe.com/p/login/9B6fZg60zbyJcfW8gG5kk00",
   "drops": [
     {
       "date": "2026-11-02",
