@@ -1,15 +1,161 @@
 {
-  "_how_to_edit": "Edit this file to update the member page. next_drop shows in the big block. Add released drops to the top of 'drops' with a working url. portal_url: paste the Stripe customer portal login link when it exists, leave empty to show the reply-to-receipt instruction. Dates are YYYY-MM-DD, Pacific time.",
-  "cadence": "Every Monday",
+  "_how_to_edit": "Edit this file to update the member page. current_drop is the plan shown in full at the top of the drops section (title, summary, days with links). next_drop shows in the calendar block. drops lists released drops, newest first, each with a url (https link or #week-N anchor). portal_url: paste the Stripe customer portal login link when it exists; when set, the page shows a billing portal button, when empty it tells members to reply to the Stripe receipt email. Q&A is async by replying to the receipt email. Dates are YYYY-MM-DD, Pacific time. No em dashes in any text.",
+  "cadence": "New drop every Monday",
+  "current_drop": {
+    "week": 0,
+    "date": "2026-11-02",
+    "title": "Week 0: LLM fundamentals and RAG, a 7-day starter plan",
+    "summary": "Available now. Three questions a day for seven days, about 20 minutes each, built from the AI engineer bank, the RAG deep dive and the practice tools. Start today, finish before Week 1 lands.",
+    "days": [
+      {
+        "day": 1,
+        "focus": "How LLMs work",
+        "task": "Answer each question out loud in 2 minutes, then compare with the model answer.",
+        "links": [
+          {
+            "title": "Explain the transformer architecture",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/explain-the-transformer-architecture/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "What is tokenization?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-tokenization-in-llms/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "What is a context window?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-a-context-window/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 2,
+        "focus": "Inference and decoding",
+        "task": "Write a 5-line answer for each, then paste one into Answer check.",
+        "links": [
+          {
+            "title": "What is a KV cache?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-kv-cache/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "Temperature vs top-p",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/temperature-vs-top-p/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "What is quantization?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-quantization-in-llms/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "focus": "Training and failure modes",
+        "task": "For each, name one real trade-off an interviewer will push on.",
+        "links": [
+          {
+            "title": "Pre-training vs instruction tuning vs RLHF",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/pre-training-vs-instruction-tuning-vs-rlhf/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "Why do LLMs hallucinate?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/why-do-llms-hallucinate/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "How do you evaluate an LLM?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-do-you-evaluate-an-llm/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 4,
+        "focus": "RAG foundations",
+        "task": "Draw the RAG pipeline from memory, then answer all three.",
+        "links": [
+          {
+            "title": "What is RAG?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-rag/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "RAG vs fine-tuning",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/rag-vs-fine-tuning/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "Embedding model vs generative model",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/embedding-model-vs-generative-model/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 5,
+        "focus": "Retrieval quality",
+        "task": "Pick a document set you know and explain how you would chunk, search and re-rank it.",
+        "links": [
+          {
+            "title": "How to choose a chunking strategy",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-to-choose-a-chunking-strategy-for-rag/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "What is hybrid search?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-hybrid-search/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "What is re-ranking?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-re-ranking-in-rag/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 6,
+        "focus": "Debug and evaluate RAG",
+        "task": "Use the 5-step framework in the RAG deep dive to structure each answer.",
+        "links": [
+          {
+            "title": "How to debug poor RAG answers",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-to-debug-poor-rag-answers/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "How do you evaluate a RAG system?",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-do-you-evaluate-a-rag-system/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "RAG deep dive guide",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/guides/rag-interview-questions/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      },
+      {
+        "day": 7,
+        "focus": "Mock and score",
+        "task": "Run a timed mock, score two answers with Answer check, then build your plan to interview day.",
+        "links": [
+          {
+            "title": "Mock interview",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/mock-interview/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "Answer check",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/answer-check/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          },
+          {
+            "title": "Study plan",
+            "url": "https://johnnnmai.github.io/ai-engineer-interview-questions/study-plan/?utm_source=member_page&utm_medium=pass&utm_campaign=week0"
+          }
+        ]
+      }
+    ]
+  },
   "next_drop": {
     "date": "2026-11-09",
-    "title": "Week 1: LLM fundamentals and RAG, a 7-day drill plan",
-    "summary": "Seven short daily sets pulled from the AI engineer bank, each with a scoring rubric so you can grade yourself in under 15 minutes."
+    "title": "Week 1: AI agents and tool use, a 7-day drill plan",
+    "summary": "Agent design, function calling, MCP, memory and reliability in production, with one system design prompt to finish the week."
   },
   "qa": {
-    "day_of_month": 15,
-    "note": "Reply to any drop email with one interview question. Written answers for all members go out on the 15th."
+    "note": "Questions any time: reply to your Stripe receipt email with an interview question and we answer in writing by email. No live calls."
   },
   "portal_url": "",
-  "drops": []
+  "drops": [
+    {
+      "date": "2026-11-02",
+      "title": "Week 0: LLM fundamentals and RAG, a 7-day starter plan",
+      "url": "#week-0"
+    }
+  ]
 }

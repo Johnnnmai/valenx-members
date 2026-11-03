@@ -75,6 +75,13 @@ a.card:hover::after{color:var(--gold);transform:translate(2px,-2px)}
 .count{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
 .count span{font:500 13px/1 "Geist Mono",monospace;background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
 .past{margin-top:18px}
+.w0{margin-bottom:28px}
+.w0 h3{font-size:clamp(24px,3.4vw,32px);line-height:1.15;letter-spacing:-.02em;font-weight:600;margin:14px 0 10px}
+.w0>p{color:var(--mute);max-width:760px;margin-bottom:22px}
+.day h3{font-size:19px}
+.dl{list-style:none;margin-top:14px;display:grid;gap:8px;font-size:15px}
+.dl a.u{color:var(--tx);border-bottom:1px solid rgba(212,165,116,.5)}
+.dl a.u:hover{color:var(--gold)}
 .past a{display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--tx)}
 .past a span:last-child{color:var(--dim);font:500 12px "Geist Mono",monospace;white-space:nowrap}
 .steps{counter-reset:s;display:grid;gap:14px}
@@ -102,13 +109,15 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   <h1>You're in.<br><span class="soft">Now let's get you <span class="serif">ready</span>.</span></h1>
   <p class="lede"><b>Thank you for joining Valenx Interview Pass.</b> Everything you get is on this page. Bookmark it now: this link is private to members and is not listed anywhere.</p>
   <div class="cta-row">
-    <a class="btn pri" href="#banks">Open the question banks <span aria-hidden="true">&darr;</span></a>
-    <a class="btn ghost" href="#drop">See the next drop</a>
+    <a class="btn pri" href="#week-0">Start Week 0 now <span aria-hidden="true">&darr;</span></a>
+    <a class="btn ghost" href="#banks">Open the question banks</a>
+    <a class="btn ghost" id="portalBtn" href="#help" style="display:none" target="_blank" rel="noopener">Billing portal</a>
   </div>
   <div class="chips">
     <span class="pill">200+ graded questions</span>
     <span class="pill">Scoring rubrics</span>
-    <span class="pill">New drill plan weekly</span>
+    <span class="pill">Week 0 available now</span>
+    <span class="pill">New drop every Monday</span>
     <span class="pill">No live calls</span>
   </div>
 </div>
@@ -123,8 +132,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
       <li><span class="ck">&#10003;</span><span><b>Practice tools.</b> Answer check, mock interview, study plan and LLM cost calculator.</span></li>
     </ul></div>
     <div class="card rv"><ul class="list">
-      <li><span class="ck">&#10003;</span><span><b>A drill drop every week.</b> A focused plan for your target role, posted below and sent by email.</span></li>
-      <li><span class="ck">&#10003;</span><span><b>One written Q&amp;A a month.</b> Send one interview question; answers for all members go out on the 15th.</span></li>
+      <li><span class="ck">&#10003;</span><span><b>A new drill drop every Monday.</b> A focused 7-day plan, posted below and sent by email. Week 0 is ready for you today.</span></li>
+      <li><span class="ck">&#10003;</span><span><b>Async written Q&amp;A.</b> Reply to your Stripe receipt email with an interview question and get a written answer by email.</span></li>
       <li><span class="ck">&#10003;</span><span><b>Cancel anytime.</b> You keep everything already sent. Full refund within 7 days of your first payment.</span></li>
     </ul></div>
   </div>
@@ -167,15 +176,18 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
 
 <section id="drop"><div class="wrap">
   <p class="eyebrow">The weekly drop</p>
-  <h2>Your next drill, <span class="serif">on schedule</span>.</h2>
+  <h2>Start today, then a new drill <span class="serif">every Monday</span>.</h2>
+  <!--W0-->
+  <div id="week-0" class="w0"><span class="pill on">Available now</span><h3 id="cTitle">Week 0: LLM fundamentals and RAG, a 7-day starter plan</h3><p id="cSummary">Available now. Three questions a day for seven days, about 20 minutes each, built from the AI engineer bank, the RAG deep dive and the practice tools. Start today, finish before Week 1 lands.</p><div class="grid c3 days" id="cDays"><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 1</p><h3>How LLMs work</h3><p>Answer each question out loud in 2 minutes, then compare with the model answer.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/explain-the-transformer-architecture/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Explain the transformer architecture</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-tokenization-in-llms/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is tokenization?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-a-context-window/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is a context window?</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 2</p><h3>Inference and decoding</h3><p>Write a 5-line answer for each, then paste one into Answer check.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-kv-cache/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is a KV cache?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/temperature-vs-top-p/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Temperature vs top-p</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-quantization-in-llms/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is quantization?</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 3</p><h3>Training and failure modes</h3><p>For each, name one real trade-off an interviewer will push on.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/pre-training-vs-instruction-tuning-vs-rlhf/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Pre-training vs instruction tuning vs RLHF</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/why-do-llms-hallucinate/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Why do LLMs hallucinate?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-do-you-evaluate-an-llm/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">How do you evaluate an LLM?</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 4</p><h3>RAG foundations</h3><p>Draw the RAG pipeline from memory, then answer all three.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-rag/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is RAG?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/rag-vs-fine-tuning/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">RAG vs fine-tuning</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/embedding-model-vs-generative-model/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Embedding model vs generative model</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 5</p><h3>Retrieval quality</h3><p>Pick a document set you know and explain how you would chunk, search and re-rank it.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-to-choose-a-chunking-strategy-for-rag/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">How to choose a chunking strategy</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-hybrid-search/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is hybrid search?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/what-is-re-ranking-in-rag/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">What is re-ranking?</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 6</p><h3>Debug and evaluate RAG</h3><p>Use the 5-step framework in the RAG deep dive to structure each answer.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-to-debug-poor-rag-answers/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">How to debug poor RAG answers</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/questions/how-do-you-evaluate-a-rag-system/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">How do you evaluate a RAG system?</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/guides/rag-interview-questions/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">RAG deep dive guide</a></li></ul></div><div class="card day rv"><p class="meta" style="margin:0 0 10px">Day 7</p><h3>Mock and score</h3><p>Run a timed mock, score two answers with Answer check, then build your plan to interview day.</p><ul class="dl"><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/mock-interview/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Mock interview</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/answer-check/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Answer check</a></li><li><a class="u" href="https://johnnnmai.github.io/ai-engineer-interview-questions/study-plan/?utm_source=member_page&amp;utm_medium=pass&amp;utm_campaign=week0" target="_blank" rel="noopener">Study plan</a></li></ul></div></div></div>
+  <!--/W0-->
   <div class="drop rv">
     <div class="cal" aria-hidden="true"><div class="m" id="dMonth">Nov 2026</div><div class="d" id="dDay">9</div><div class="w" id="dWeek">Monday</div></div>
     <div>
-      <span class="pill" id="dCadence">Every Monday</span>
-      <h3 id="dTitle">Week 1: LLM fundamentals and RAG, a 7-day drill plan</h3>
-      <p id="dSummary">Seven short daily sets pulled from the AI engineer bank, each with a scoring rubric so you can grade yourself in under 15 minutes.</p>
+      <span class="pill" id="dCadence">New drop every Monday</span>
+      <h3 id="dTitle">Week 1: AI agents and tool use, a 7-day drill plan</h3>
+      <p id="dSummary">Agent design, function calling, MCP, memory and reliability in production, with one system design prompt to finish the week.</p>
       <div class="count" id="dCount"></div>
-      <p style="margin-top:16px;font-size:15px" id="dQa">Reply to any drop email with one interview question. Written answers for all members go out on the 15th.</p>
+      <p style="margin-top:16px;font-size:15px" id="dQa">Questions any time: reply to your Stripe receipt email with an interview question and we answer in writing by email. No live calls.</p>
     </div>
   </div>
   <div class="past" id="past"></div>
@@ -185,9 +197,9 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   <p class="eyebrow">How each week works</p>
   <h2>Simple, <span class="serif">written</span>, steady.</h2>
   <div class="steps">
-    <div class="card rv"><h3>Get the drop</h3><p>A new drill plan lands here and in your inbox every week.</p></div>
+    <div class="card rv"><h3>Get the drop</h3><p>A new 7-day drill plan lands here and in your inbox every Monday.</p></div>
     <div class="card rv"><h3>Practice and score</h3><p>Answer out loud, then grade yourself with the rubric.</p></div>
-    <div class="card rv"><h3>Ask one question</h3><p>Reply with one question a month. Answers arrive on the 15th.</p></div>
+    <div class="card rv"><h3>Ask a question</h3><p>Reply to your receipt email any time. We answer in writing, async.</p></div>
   </div>
 </div></section>
 
@@ -209,6 +221,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   document.querySelectorAll('.rv').forEach(function(el){io?io.observe(el):el.classList.add('in')});
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
   function safeUrl(u){return /^https:\/\//.test(u||'')?u:''}
+  function linkUrl(u){return /^#[a-z0-9-]+$/.test(u||'')?u:safeUrl(u)}
   fetch('drops.json',{cache:'no-store'}).then(function(r){return r.json()}).then(function(d){
     var n=d.next_drop||{};
     if(n.date){var p=n.date.split('-'),dt=new Date(+p[0],+p[1]-1,+p[2]);
@@ -221,11 +234,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     if(n.title)document.getElementById('dTitle').textContent=n.title;
     if(n.summary)document.getElementById('dSummary').textContent=n.summary;
     if(d.cadence)document.getElementById('dCadence').textContent=d.cadence;
+    var c=d.current_drop;
+    if(c&&c.title){document.getElementById('cTitle').textContent=c.title;if(c.summary)document.getElementById('cSummary').textContent=c.summary;
+      if(c.days&&c.days.length)document.getElementById('cDays').innerHTML=c.days.map(function(x){return '<div class="card day rv in"><p class="meta" style="margin:0 0 10px">Day '+esc(x.day)+'</p><h3>'+esc(x.focus)+'</h3><p>'+esc(x.task||'')+'</p><ul class="dl">'+(x.links||[]).filter(function(l){return safeUrl(l.url)}).map(function(l){return '<li><a class="u" href="'+esc(l.url)+'" target="_blank" rel="noopener">'+esc(l.title)+'</a></li>'}).join('')+'</ul></div>'}).join('')}
     if(d.qa&&d.qa.note)document.getElementById('dQa').textContent=d.qa.note;
-    var past=(d.drops||[]).filter(function(x){return safeUrl(x.url)});
-    if(past.length){document.getElementById('past').innerHTML='<p class="eyebrow" style="margin-top:28px">Past drops</p>'+past.map(function(x){return '<a href="'+esc(x.url)+'" target="_blank" rel="noopener"><span>'+esc(x.title)+'</span><span>'+esc(x.date||'')+'</span></a>'}).join('')}
+    var past=(d.drops||[]).filter(function(x){return linkUrl(x.url)});
+    if(past.length){document.getElementById('past').innerHTML='<p class="eyebrow" style="margin-top:28px">Released drops</p>'+past.map(function(x){var h=linkUrl(x.url),ext=h.charAt(0)!='#';return '<a href="'+esc(h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'><span>'+esc(x.title)+'</span><span>'+esc(x.date||'')+'</span></a>'}).join('')}
     var pu=safeUrl(d.portal_url);
-    if(pu){document.getElementById('manage').innerHTML='Cancel, update your card or download invoices any time in the <a class="u" href="'+esc(pu)+'" target="_blank" rel="noopener">billing portal</a> (sign in with the email you paid with). Full refund within 7 days of your first payment: write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20refund">press@valenx.org</a>.'}
+    if(pu){var pb=document.getElementById('portalBtn');pb.href=pu;pb.style.display='';document.getElementById('manage').innerHTML='Cancel, update your card or download invoices any time in the <a class="u" href="'+esc(pu)+'" target="_blank" rel="noopener">billing portal</a> (sign in with the email you paid with). Full refund within 7 days of your first payment: write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20refund">press@valenx.org</a>.'}
   }).catch(function(){});
 })();
 </script>
