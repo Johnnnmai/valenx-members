@@ -1,6 +1,6 @@
 # valenx-members
 
-**Free:** [Check your interview answer](https://johnnnmai.github.io/ai-engineer-interview-questions/answer-check/?utm_source=github&utm_medium=readme&utm_campaign=valenx-members)  |  **Weekly drills:** [Interview Pass, $19/mo](https://buy.stripe.com/14AeVc4Wv7ita7O1Si5kk0j?utm_source=github&utm_medium=readme&utm_campaign=valenx-members)
+**Free:** [Check your interview answer](https://johnnnmai.github.io/ai-engineer-interview-questions/answer-check/?utm_source=github&utm_medium=readme&utm_campaign=valenx-members)  |  **Weekly drills:** [Interview Pass, $19/mo](https://valenx.org/pass?utm_source=github&utm_medium=readme&utm_campaign=valenx-members)
 
 Static member pages for Valenx Press, served by GitHub Pages. Pages carry `noindex` and are not in any sitemap.
 
