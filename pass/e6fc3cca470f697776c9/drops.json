@@ -1,0 +1,15 @@
+{
+  "_how_to_edit": "Edit this file to update the member page. next_drop shows in the big block. Add released drops to the top of 'drops' with a working url. portal_url: paste the Stripe customer portal login link when it exists, leave empty to show the reply-to-receipt instruction. Dates are YYYY-MM-DD, Pacific time.",
+  "cadence": "Every Monday",
+  "next_drop": {
+    "date": "2026-11-09",
+    "title": "Week 1: LLM fundamentals and RAG, a 7-day drill plan",
+    "summary": "Seven short daily sets pulled from the AI engineer bank, each with a scoring rubric so you can grade yourself in under 15 minutes."
+  },
+  "qa": {
+    "day_of_month": 15,
+    "note": "Reply to any drop email with one interview question. Written answers for all members go out on the 15th."
+  },
+  "portal_url": "",
+  "drops": []
+}
