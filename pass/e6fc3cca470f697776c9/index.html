@@ -134,7 +134,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     <div class="card rv"><ul class="list">
       <li><span class="ck">&#10003;</span><span><b>A new drill drop every Monday.</b> A focused 7-day plan, posted below and sent by email. Week 0 is ready for you today.</span></li>
       <li><span class="ck">&#10003;</span><span><b>Async written Q&amp;A.</b> Reply to your Stripe receipt email with an interview question and get a written answer by email.</span></li>
-      <li><span class="ck">&#10003;</span><span><b>Cancel anytime.</b> You keep everything already sent. Full refund within 7 days of your first payment.</span></li>
+      <li><span class="ck">&#10003;</span><span><b>Cancel anytime.</b> You keep everything already sent.</span></li>
     </ul></div>
   </div>
 </div></section>
@@ -217,7 +217,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
   <h2>We're <span class="serif">here</span>.</h2>
   <div class="grid c2">
     <div class="card rv"><h3>Support</h3><p>Questions, access issues or a missing email: write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20support">press@valenx.org</a>. We reply within one business day.</p></div>
-    <div class="card rv"><h3>Manage or cancel</h3><p id="manage">To cancel, update your card or get an invoice, reply to your Stripe receipt email or write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20billing">press@valenx.org</a>. Full refund within 7 days of your first payment.</p></div>
+    <div class="card rv"><h3>Manage or cancel</h3><p id="manage">To cancel, update your card or get an invoice, reply to your Stripe receipt email or write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20billing">press@valenx.org</a>.</p></div>
   </div>
 </div></section>
 </main>
@@ -250,7 +250,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between}
     var past=(d.drops||[]).filter(function(x){return linkUrl(x.url)});
     if(past.length){document.getElementById('past').innerHTML='<p class="eyebrow" style="margin-top:28px">Released drops</p>'+past.map(function(x){var h=linkUrl(x.url),ext=h.charAt(0)!='#';return '<a href="'+esc(h)+'"'+(ext?' target="_blank" rel="noopener"':'')+'><span>'+esc(x.title)+'</span><span>'+esc(x.date||'')+'</span></a>'}).join('')}
     var pu=safeUrl(d.portal_url);
-    if(pu){var pb=document.getElementById('portalBtn');pb.href=pu;pb.style.display='';document.getElementById('manage').innerHTML='Cancel, update your card or download invoices any time in the <a class="u" href="'+esc(pu)+'" target="_blank" rel="noopener">billing portal</a> (sign in with the email you paid with). Full refund within 7 days of your first payment: write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20refund">press@valenx.org</a>.'}
+    if(pu){var pb=document.getElementById('portalBtn');pb.href=pu;pb.style.display='';document.getElementById('manage').innerHTML='Cancel, update your card or download invoices any time in the <a class="u" href="'+esc(pu)+'" target="_blank" rel="noopener">billing portal</a> (sign in with the email you paid with). Billing questions: write to <a class="u" href="mailto:press@valenx.org?subject=Interview%20Pass%20billing">press@valenx.org</a>.'}
   }).catch(function(){});
 })();
 </script>
